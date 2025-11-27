@@ -64,22 +64,6 @@ const WhyUsemy: React.FC = () => {
           ))}
         </div>
 
-        {/* Stats section */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { number: '10K+', label: 'Professionnels' },
-            { number: '50K+', label: 'Particuliers' },
-            { number: '95%', label: 'Satisfaction' },
-            { number: '24/7', label: 'Support' }
-          ].map((stat, index) => (
-            <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 100 + 800}ms` }}>
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent mb-2">
-                {stat.number}
-              </div>
-              <div className="text-gray-300 font-medium">{stat.label}</div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

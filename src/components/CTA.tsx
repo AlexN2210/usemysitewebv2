@@ -1,30 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Apple, Play, ArrowRight, Sparkles } from 'lucide-react';
-import { usePWAInstall } from '../hooks/usePWAInstall';
-import IOSInstallOverlay from './IOSInstallOverlay';
 
 const CTA: React.FC = () => {
-  const { installPWA, isInstalled, isIOS } = usePWAInstall();
-  const [showIOSOverlay, setShowIOSOverlay] = useState(false);
-
-  useEffect(() => {
-    const handleShowIOSOverlay = () => {
-      setShowIOSOverlay(true);
-    };
-
-    window.addEventListener('showIOSInstallGuide', handleShowIOSOverlay);
-    return () => {
-      window.removeEventListener('showIOSInstallGuide', handleShowIOSOverlay);
-    };
-  }, []);
-
-  const handleDownloadClick = async () => {
-    if (isIOS) {
-      // Pour iOS, on affiche directement l'overlay
-      setShowIOSOverlay(true);
-    } else {
-      await installPWA();
-    }
+  const handleOpenAppClick = () => {
+    window.location.href = 'https://usemypwa-v2.vercel.app';
   };
 
   return (
@@ -60,13 +39,13 @@ const CTA: React.FC = () => {
           {/* Download buttons */}
           <div className="download-buttons flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in delay-300">
             <button 
-              onClick={handleDownloadClick}
+              onClick={handleOpenAppClick}
               className="group bg-white text-gray-900 px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 flex items-center space-x-4 min-w-[280px]"
             >
               <Apple className="h-8 w-8 group-hover:scale-110 transition-transform duration-300" />
               <div className="text-left">
                 <div className="text-sm text-gray-600">
-                  {isInstalled ? 'Déjà installé' : 'Télécharger sur'}
+                  Télécharger sur
                 </div>
                 <div className="font-bold text-lg">App Store</div>
               </div>
@@ -74,13 +53,13 @@ const CTA: React.FC = () => {
             </button>
             
             <button 
-              onClick={handleDownloadClick}
+              onClick={handleOpenAppClick}
               className="group bg-gray-900 text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 flex items-center space-x-4 min-w-[280px]"
             >
               <Play className="h-8 w-8 group-hover:scale-110 transition-transform duration-300" />
               <div className="text-left">
                 <div className="text-sm text-gray-300">
-                  {isInstalled ? 'Déjà installé' : 'Télécharger sur'}
+                  Télécharger sur
                 </div>
                 <div className="font-bold text-lg">Google Play</div>
               </div>
@@ -108,11 +87,6 @@ const CTA: React.FC = () => {
         </div>
       </div>
 
-      {/* Overlay d'installation iOS */}
-      <IOSInstallOverlay 
-        isVisible={showIOSOverlay} 
-        onClose={() => setShowIOSOverlay(false)} 
-      />
     </section>
   );
 };

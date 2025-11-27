@@ -1,30 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Apple, Play } from 'lucide-react';
-import { usePWAInstall } from '../hooks/usePWAInstall';
-import IOSInstallOverlay from './IOSInstallOverlay';
 
 const HeroSection: React.FC = () => {
-  const { installPWA, isInstalled, isIOS } = usePWAInstall();
-  const [showIOSOverlay, setShowIOSOverlay] = useState(false);
-
-  useEffect(() => {
-    const handleShowIOSOverlay = () => {
-      setShowIOSOverlay(true);
-    };
-
-    window.addEventListener('showIOSInstallGuide', handleShowIOSOverlay);
-    return () => {
-      window.removeEventListener('showIOSInstallGuide', handleShowIOSOverlay);
-    };
-  }, []);
-
-  const handleDownloadClick = async () => {
-    if (isIOS) {
-      // Pour iOS, on affiche directement l'overlay
-      setShowIOSOverlay(true);
-    } else {
-      await installPWA();
-    }
+  const handleOpenAppClick = () => {
+    window.location.href = 'https://usemypwa-v2.vercel.app';
   };
 
   return (
@@ -55,26 +34,26 @@ const HeroSection: React.FC = () => {
             {/* Download buttons */}
             <div className="download-buttons flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button 
-                onClick={handleDownloadClick}
+                onClick={handleOpenAppClick}
                 className="group bg-white text-gray-900 px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3"
               >
                 <Apple className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
                 <div className="text-left">
                   <div className="text-sm text-gray-600">
-                    {isInstalled ? 'Déjà installé' : 'Télécharger sur'}
+                    Télécharger sur
                   </div>
                   <div className="font-bold">App Store</div>
                 </div>
               </button>
               
               <button 
-                onClick={handleDownloadClick}
+                onClick={handleOpenAppClick}
                 className="group bg-gray-900 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3"
               >
                 <Play className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
                 <div className="text-left">
                   <div className="text-sm text-gray-300">
-                    {isInstalled ? 'Déjà installé' : 'Télécharger sur'}
+                    Télécharger sur
                   </div>
                   <div className="font-bold">Google Play</div>
                 </div>
@@ -156,11 +135,6 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Overlay d'installation iOS */}
-      <IOSInstallOverlay 
-        isVisible={showIOSOverlay} 
-        onClose={() => setShowIOSOverlay(false)} 
-      />
     </section>
   );
 };

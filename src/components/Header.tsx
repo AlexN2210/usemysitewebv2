@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { usePWAInstall } from '../hooks/usePWAInstall';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { installPWA, isInstalled } = usePWAInstall();
 
-  const handleDownloadClick = async () => {
-    await installPWA();
+  const handleOpenAppClick = () => {
+    window.location.href = 'https://usemypwa-v2.vercel.app';
   };
 
   useEffect(() => {
@@ -67,10 +65,10 @@ const Header: React.FC = () => {
               </a>
             ))}
             <button 
-              onClick={handleDownloadClick}
+              onClick={handleOpenAppClick}
               className="bg-gradient-to-r from-cyan-500 to-pink-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
-              {isInstalled ? 'Déjà installé' : 'Télécharger'}
+              Accéder à l'app
             </button>
           </nav>
 
@@ -101,10 +99,10 @@ const Header: React.FC = () => {
               </a>
             ))}
             <button 
-              onClick={handleDownloadClick}
+              onClick={handleOpenAppClick}
               className="w-full bg-gradient-to-r from-cyan-500 to-pink-500 text-white py-2 rounded-full font-semibold"
             >
-              {isInstalled ? 'Déjà installé' : 'Télécharger'}
+              Accéder à l'app
             </button>
           </div>
         </div>

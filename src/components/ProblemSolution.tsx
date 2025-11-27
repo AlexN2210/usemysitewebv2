@@ -26,11 +26,11 @@ const ProblemSolution: React.FC = () => {
 
             <div className="space-y-4">
               {[
-                'Annuaires obsolètes et peu fiables',
-                'Recherche complexe et chronophage',
+                'Recherche longue et complexe',
                 'Aucune garantie de qualité',
-                'Pas de transparence sur les prix',
-                'Contact difficile avec les pros'
+                'Contact difficile avec les pros',
+                'Peu de visibilité sur le travail du professionnel',
+                'Pas de transparence sur les prix'
               ].map((problem, index) => (
                 <div key={index} className="flex items-center space-x-3 p-4 bg-red-50 rounded-xl border border-red-100">
                   <X className="h-5 w-5 text-red-500 flex-shrink-0" />

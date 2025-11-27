@@ -1,33 +1,27 @@
 import React from 'react';
-import { Smartphone, Mail, MapPin, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Smartphone, Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const footerLinks = {
     legal: [
       { name: 'Conditions Générales d\'Utilisation', href: '#cgu' },
-      { name: 'Politique de Confidentialité', href: '#privacy' },
-      { name: 'Mentions Légales', href: '#mentions' },
+      { name: 'Politique de Confidentialité', href: '#confidentialite' },
+      { name: 'Mentions Légales', href: '#mentions-legales' },
       { name: 'Cookies', href: '#cookies' }
     ],
     support: [
-      { name: 'Centre d\'Aide', href: '#help' },
-      { name: 'Nous Contacter', href: '#contact' },
-      { name: 'Signaler un Problème', href: '#report' },
-      { name: 'Suggestions', href: '#feedback' }
+      { name: 'Centre d\'Aide', href: '#faq' },
+      { name: 'Nous Contacter', href: 'mailto:contact@usemy.fr?subject=Contact%20USEMY' },
+      { name: 'Signaler un Problème', href: 'mailto:contact@usemy.fr?subject=Signalement%20de%20probl%C3%A8me%20USEMY' },
+      { name: 'Suggestions', href: 'mailto:contact@usemy.fr?subject=Suggestions%20pour%20USEMY' }
     ],
     company: [
-      { name: 'À Propos', href: '#about' },
-      { name: 'Carrières', href: '#careers' },
-      { name: 'Presse', href: '#press' },
-      { name: 'Blog', href: '#blog' }
+      { name: 'À Propos', href: '#features' },
+      { name: 'Carrières', href: 'mailto:contact@usemy.fr?subject=Candidature%20spontan%C3%A9e%20USEMY' },
+      { name: 'Presse', href: 'mailto:contact@usemy.fr?subject=Contact%20Presse%20USEMY' },
+      { name: 'Blog', href: 'https://usemy.fr/blog' }
     ]
   };
-
-  const socialLinks = [
-    { icon: Twitter, href: '#twitter', name: 'Twitter' },
-    { icon: Linkedin, href: '#linkedin', name: 'LinkedIn' },
-    { icon: Instagram, href: '#instagram', name: 'Instagram' }
-  ];
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -53,7 +47,12 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-cyan-400" />
-                <span className="text-gray-300">contact@usemy.fr</span>
+                <a 
+                  href="mailto:contact@usemy.fr" 
+                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+                >
+                  contact@usemy.fr
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-pink-400" />
@@ -61,19 +60,6 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
-            {/* Social links */}
-            <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="bg-gray-800 p-3 rounded-xl hover:bg-gradient-to-r hover:from-cyan-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-110"
-                  aria-label={social.name}
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Legal links */}

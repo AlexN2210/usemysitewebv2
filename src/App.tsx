@@ -8,6 +8,7 @@ import AppDemo from './components/AppDemo';
 import BusinessModel from './components/BusinessModel';
 import CTA from './components/CTA';
 import FAQ from './components/FAQ';
+import LegalSection from './components/LegalSection';
 import Footer from './components/Footer';
 import PWAWrapper from './components/PWAWrapper';
 import PWANotification from './components/PWANotification';
@@ -37,6 +38,7 @@ function App() {
           <BusinessModel />
           <CTA />
           <FAQ />
+          <LegalSection />
         </main>
         <Footer />
 

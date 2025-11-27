@@ -9,7 +9,6 @@ import BusinessModel from './components/BusinessModel';
 import CTA from './components/CTA';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
-import PWAInstallPrompt from './components/PWAInstallPrompt';
 import PWAWrapper from './components/PWAWrapper';
 import PWANotification from './components/PWANotification';
 
@@ -40,10 +39,7 @@ function App() {
           <FAQ />
         </main>
         <Footer />
-        
-        {/* PWA Install Prompt */}
-        <PWAInstallPrompt />
-        
+
         {/* PWA Notification */}
         <PWANotification />
         

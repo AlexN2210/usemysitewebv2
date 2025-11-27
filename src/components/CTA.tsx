@@ -102,7 +102,7 @@ const CTA: React.FC = () => {
             
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
               <h4 className="text-lg font-bold text-white mb-2">🎁 Offre de lancement</h4>
-              <p className="text-cyan-100">Cashback doublé les premiers mois</p>
+              <p className="text-cyan-100">Accès privilégié aux premières fonctionnalités USEMY</p>
             </div>
           </div>
         </div>

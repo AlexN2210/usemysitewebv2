@@ -13,7 +13,7 @@ const FAQ: React.FC = () => {
     {
       icon: CreditCard,
       question: 'L\'application est-elle vraiment gratuite ?',
-      answer: 'Oui, USEMY est 100% gratuit pour les particuliers. Nous gagnons de l\'argent grâce aux abonnements des professionnels et redistribuons une partie sous forme de cashback.'
+      answer: 'Oui, USEMY est 100% gratuit pour les particuliers. Notre modèle économique repose sur les abonnements des professionnels.'
     },
     {
       icon: Star,
@@ -25,11 +25,7 @@ const FAQ: React.FC = () => {
       question: 'Comment vérifiez-vous les professionnels ?',
       answer: 'Chaque professionnel doit fournir ses certifications, assurances et références. Notre équipe vérifie manuellement chaque dossier avant validation.'
     },
-    {
-      icon: CreditCard,
-      question: 'Comment fonctionne le programme cashback ?',
-      answer: 'Vous recevez entre 2% et 5% du montant de chaque prestation sous forme de crédit utilisable pour vos prochains services ou transférable sur votre compte bancaire.'
-    }
+    // Question sur le cashback supprimée car le programme n\'est plus proposé
   ];
 
   const toggleFAQ = (index: number) => {

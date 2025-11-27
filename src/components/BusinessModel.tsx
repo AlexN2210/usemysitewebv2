@@ -36,16 +36,16 @@ const BusinessModel: React.FC = () => {
 
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-lg font-semibold text-green-800">Programme Cashback</span>
+                  <span className="text-lg font-semibold text-green-800">Transparence totale</span>
                 </div>
                 <p className="text-gray-700 ml-5">
-                  Gagnez de l'argent sur chaque prestation réalisée via l'app
+                  Comparez les professionnels selon leurs tarifs, avis et disponibilités en toute clarté
                 </p>
               </div>
 
               <div className="bg-green-100 p-4 rounded-xl">
                 <p className="text-green-800 font-medium text-center">
-                  💰 Jusqu'à 5% de cashback sur vos prestations !
+                  💡 Une expérience simple, transparente et sans frais cachés
                 </p>
               </div>
             </div>
@@ -108,7 +108,7 @@ const BusinessModel: React.FC = () => {
                 <TrendingUp className="h-8 w-8 flex-shrink-0" />
                 <div className="text-left">
                   <h4 className="font-bold">Croissance mutuelle</h4>
-                  <p className="text-cyan-100">Plus de clients pour les pros, plus de cashback pour les particuliers</p>
+                  <p className="text-cyan-100">Plus de clients pour les pros, plus de choix et de sérénité pour les particuliers</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">

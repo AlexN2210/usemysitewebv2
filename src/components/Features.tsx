@@ -15,8 +15,8 @@ const Features: React.FC = () => {
     },
     {
       icon: Gift,
-      title: 'Programme Cashback',
-      description: 'Gagnez de l\'argent sur chaque prestation réalisée'
+      title: 'Suivi de vos demandes',
+      description: 'Gardez une trace de vos échanges et retrouvez facilement vos professionnels favoris'
     },
     {
       icon: Filter,

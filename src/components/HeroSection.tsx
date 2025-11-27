@@ -148,8 +148,8 @@ const HeroSection: React.FC = () => {
               <div className="absolute -top-4 -right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold animate-bounce">
                 Nouveau !
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-green-400 text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse">
-                Cashback !
+              <div className="absolute -bottom-4 -left-4 bg-green-400 text-white px-3 py-1 rounded-full text-xs font-semibold animate-pulse">
+                Filtres avancés : Spécialité, Distance, Prix, Disponibilités
               </div>
             </div>
           </div>

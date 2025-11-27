@@ -6,7 +6,7 @@ const Features: React.FC = () => {
     {
       icon: Heart,
       title: 'Système de Swipe',
-      description: 'Like, Super Like ou Pass - trouvez votre pro idéal en quelques gestes'
+      description: 'Like, Super Like ou Pass – trouvez votre pro idéal en quelques gestes et échangez vos coordonnées avec celui que vous appréciez le plus.'
     },
     {
       icon: MapPin,

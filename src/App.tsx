@@ -39,7 +39,7 @@ function App() {
           <FAQ />
         </main>
         <Footer />
-
+        
         {/* PWA Notification */}
         <PWANotification />
         

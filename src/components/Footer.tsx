@@ -4,10 +4,10 @@ import { Smartphone, Mail, MapPin } from 'lucide-react';
 const Footer: React.FC = () => {
   const footerLinks = {
     legal: [
-      { name: 'Conditions Générales d\'Utilisation', href: '/legal.html#cgu' },
-      { name: 'Politique de Confidentialité', href: '/legal.html#confidentialite' },
-      { name: 'Mentions Légales', href: '/legal.html#mentions-legales' },
-      { name: 'Cookies', href: '/legal.html#cookies' }
+      { name: 'Conditions Générales d\'Utilisation', href: '/cgu.html' },
+      { name: 'Politique de Confidentialité', href: '/confidentialite.html' },
+      { name: 'Mentions Légales', href: '/mentions-legales.html' },
+      { name: 'Cookies', href: '/cookies.html' }
     ],
     support: [
       { name: 'Centre d\'Aide', href: '#faq' },
